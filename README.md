@@ -136,7 +136,7 @@ at the module and system levels.
 The transmitter is tested using an independent bit-bang receiver that decodes
 the generated 8N1 serial frames and checks the transmitted data and stop bit.
 
-![UART TX Simulation](images/tb_uart_tx.png)
+![UART TX Simulation](images/uart_tx.png)
 
 **60/60 frames passed — 0 mismatches.**
 
@@ -146,7 +146,7 @@ The receiver is tested using an independent bit-bang UART driver. In addition
 to valid frames, a malformed stop-bit frame is injected to verify error
 detection.
 
-![UART RX Simulation](images/tb_uart_rx.png)
+![UART RX Simulation](images/uart_rx.png)
 
 **60/60 valid frames passed — malformed stop bit detected correctly.**
 
@@ -156,7 +156,7 @@ The complete UART controller is tested by connecting TX directly to RX through
 the serial loopback path. Both asynchronous FIFOs and their clock-domain
 crossings are exercised using unrelated clock domains.
 
-![UART + Async FIFO Simulation](images/tb_uart_fifo_top.png)
+![UART + Async FIFO Simulation](images/uart_fifo_top.png)
 
 **60/60 bytes transferred successfully — 0 mismatches, no overflow, no frame
 errors.**
